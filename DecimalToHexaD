@@ -1,0 +1,35 @@
+
+package decimal.to.hexad;
+
+import java.util.Scanner;
+
+
+public class DecimalToHexaD {
+
+  
+    public static void main(String[] args) {
+        
+        // This Code is written By Salih MOhammad
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int decimal = scanner.nextInt();
+        
+        String hex = "";
+        
+        while (decimal > 0) {
+            int remainder = decimal % 16; 
+            char hexChar;
+            if (remainder < 10) {
+                hexChar = (char) ('0' + remainder); 
+            } else {
+                hexChar = (char) ('A' + (remainder - 10)); 
+            }
+            hex = hexChar + hex; 
+            decimal = decimal / 16; 
+        }
+        
+        System.out.println("Hexadecimal: " + hex);
+    }
+    
+}

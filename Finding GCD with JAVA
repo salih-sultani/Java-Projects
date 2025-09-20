@@ -1,0 +1,33 @@
+package gcd;
+
+import java.util.Scanner;
+
+public class GCD {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your first positive number to find their GCD");
+        int a = input.nextInt();
+        System.out.println("Enter your second positive number to find their GCD");
+        int b = input.nextInt();
+        
+        int minimum = Math.min(a, b);
+        
+        int GCD = 1;
+        
+        for (int i = 1; i <= minimum; i++){
+            
+            if ( a % i == 0 && b % i == 0){
+                
+                GCD = i ;
+
+            }
+        
+        }
+                                    System.out.println("The GCD between " + a + " and " + b + " is:\n" + GCD);
+
+
+    }
+
+}

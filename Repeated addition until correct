@@ -1,0 +1,38 @@
+package loops.examples;
+
+import java.util.Scanner;
+
+public class LoopsExamples {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int random1 = (int) (Math.random() * 100);
+        System.out.println("Random A " + random1);
+        int random2 = (int) (Math.random() * 100);
+        System.out.println("RandomB " + random2);
+
+        int sum = random1 + random2;
+
+        while (true) {
+
+            System.out.println("Please Enter your guess ");
+
+            int answer = input.nextInt();
+
+            if (answer == sum) {
+
+                System.out.println("Your answer is correct ");
+                break;
+            }
+            
+            else{
+                
+                System.out.println("your answr is not correct. try again");
+            }
+        }
+
+    }
+
+}
